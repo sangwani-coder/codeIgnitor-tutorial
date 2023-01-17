@@ -35,7 +35,7 @@ and any database settings.
     News.php
     Pages.php
 
-Models
+**Models**
 
     NewsModel.php
 
@@ -63,7 +63,7 @@ Models
     
 ## Server Requirements
 
-I used PHP version 8..25, with the following extensions installed:
+I used PHP version 8.0.25, with the following extensions installed:
 
 - [intl](http://php.net/manual/en/intl.requirements.php)
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
