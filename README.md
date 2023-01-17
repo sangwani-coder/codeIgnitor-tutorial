@@ -25,32 +25,45 @@ to your `app` folder. The affected files can be copied or merged from
 
 ## Setup
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
+Rename `env` to `.env` and tailor for your app, specifically the baseURL
 and any database settings.
 
-## Important Change with index.php
+## Files I created
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+**Controllers**
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+    News.php
+    Pages.php
 
-**Please** read the user guide for a better explanation of how CI4 works!
+Models
 
-## Repository Management
+    NewsModel.php
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+**Views**
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+    * news
 
+        * create.php
+        * success.php
+        * view.php
+    
+    * pages
+
+        * about.php
+        * home.php
+
+    * templates
+        * footer.php
+        * header.php
+   
+## modified configuration files
+
+    Config/Routes.php & Config/Filters.php
+
+    
 ## Server Requirements
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+I used PHP version 8..25, with the following extensions installed:
 
 - [intl](http://php.net/manual/en/intl.requirements.php)
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
@@ -60,4 +73,3 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - json (enabled by default - don't turn it off)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-# codeIgnitor-tutorial
